@@ -1,0 +1,149 @@
+body {
+	font-family: "" sans-serif; //! Input font-family
+	background-color: var(--base-color);
+	color: var(--main-color);
+	&._lock {
+		overflow: hidden;
+	}
+	svg,
+	svg path {
+		transition: fill 0.3s ease 0s;
+	}
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+	user-select: text;
+	&::selection {
+		background-color: var(--base-color);
+		color: var(--orange-color);
+	}
+}
+
+[class*="__container"] {
+	max-width: calc(rem($maxWidthContainer) + 1.875rem);
+	margin: 0 auto;
+	padding: 0px 0.9375rem;
+	@media (min-width: 100em) {
+		max-width: 80%;
+	}
+}
+h1 {
+	@include adaptiv-value("font-size", 64, 48, 0);
+}
+h2 {
+	@include adaptiv-value("font-size", 48, 38, 0);
+}
+h3 {
+	@include adaptiv-value("font-size", 38, 32, 0);
+}
+h4 {
+	@include adaptiv-value("font-size", 32, 26, 0);
+}
+h5 {
+	@include adaptiv-value("font-size", 26, 22, 0);
+}
+h6 {
+	@include adaptiv-value("font-size", 22, $rootfz, 0);
+}
+p {
+	@include adaptiv-value("font-size", $rootfz, 12, 2);
+	line-height: 1.5em;
+}
+
+.page {
+	> section:nth-child(1) {
+		@include adaptiv-value("padding-top", $startHeightHeader, $smallHeightHeader, 2);
+	}
+}
+
+.wrapper {
+	overflow: hidden;
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+main {
+	flex: 1 1 auto;
+}
+
+.page {
+}
+
+section {
+	position: relative;
+	padding: 3rem 0;
+}
+
+.btn {
+}
+
+.subtitle {
+}
+
+.title {
+}
+
+.text {
+}
+
+.type-block {
+	.subtitle {
+	}
+	.title {
+	}
+	.text {
+	}
+}
+
+//! If need
+/*
+
+.img-fluid {
+	width: 100%;
+	height: auto;
+}
+
+%visible {
+	transform: translate(0, 0);
+	opacity: 1;
+	visibility: visible;
+	pointer-events: all;
+}
+
+%invisible {
+	transform: translate(0, -50%);
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+}
+
+.underline {
+	position: relative;
+	&::after {
+		transition: transform 0.3s ease 0s;
+		left: 0;
+		transform: scaleX(0);
+		transform-origin: center;
+		content: " ";
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		height: 2px;
+		background-color: var(--main-color);
+	}
+	&:hover {
+		&::after {
+			transform: scaleX(1);
+		}
+	}
+}
+
+*/

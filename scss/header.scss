@@ -1,0 +1,29 @@
+.header {
+	position: fixed;
+	z-index: 5;
+	width: 100%;
+	background-color: var(--base-color);
+	color: var(--main-color);
+	&__container {
+		@include adaptiv-value("min-height", $startHeightHeader, $smallHeightHeader, 0);
+	}
+
+	&__menu {
+	}
+}
+.menu {
+	&__icon {
+		display: none;
+	}
+
+	&__body {
+	}
+
+	&__list {
+		> :not(:last-child) {
+		}
+	}
+
+	&__link {
+	}
+}

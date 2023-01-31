@@ -1,0 +1,15 @@
+$base-font-size: 16px;
+
+//Adaptiv value
+$maxWidth: 1440;
+$maxWidthContainer: 1200;
+
+// Colors
+@import "vars-colors";
+
+// Style's
+$defautBorderRadius: 6px;
+
+// Header sizes
+$startHeightHeader: 80;
+$smallHeightHeader: 50;
